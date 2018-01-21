@@ -1,0 +1,116 @@
+﻿@model tbPortfolio.Models.BlogPost
+
+@{
+    Layout = "~/Views/Shared/_LayoutBlog.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/myBlogAdminStyles.css">
+
+
+
+@*@{
+    ViewBag.Title = "Edit";
+}*@
+
+
+<section id="blogCreate">
+    <div class="container">
+        <div class="row blogCreateArea">
+            <div class="col-md-12">
+                <br />
+                <h1>Edit Blog Post</h1>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        @Html.HiddenFor(model => model.Id)
+
+                        <div class="form-group">
+                            @*@Html.LabelFor(model => model.Created, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                            <div class="col-md-10">
+                                @Html.HiddenFor(model => model.Created, new { htmlAttributes = new { @class = "form-control"} })
+                                @Html.ValidationMessageFor(model => model.Created, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        @*<div class="form-group">
+                           @Html.LabelFor(model => model.Updated, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.HiddenFor(model => model.Updated, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Updated, "", new { @class = "text-danger" })
+                            </div>
+                        </div>*@
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        @* Slug handled in controller *@
+                        @*<div class="form-group">
+                            @Html.LabelFor(model => model.Slug, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Slug, new { htmlAttributes = new { @class = "form-control", @Disabled=true} })
+                                @Html.ValidationMessageFor(model => model.Slug, "", new { @class = "text-danger" })
+                            </div>
+                        </div>*@
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Body, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @*@Html.EditorFor(model => model.Body, new { htmlAttributes = new { @class = "form-control" } })*@
+                                @Html.TextAreaFor(model => model.Body, new { @class = "form-control", @id = "blogEdit" })
+                                @Html.ValidationMessageFor(model => model.Body, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.MediaURL, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.MediaURL, new { htmlAttributes = new { @class = "form-control" } })
+
+
+                                @Html.ValidationMessageFor(model => model.MediaURL, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Published, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <div class="checkbox">
+                                    @Html.EditorFor(model => model.Published)
+                                    @Html.ValidationMessageFor(model => model.Published, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Save" class="btn btn-default" />
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                <div id="blogIndexLink" class="row text-center">
+                    <span class="btn btn-primary">
+                        @Html.ActionLink("Blog Index", "Index")
+                    </span>
+                </div><br />
+            </div>
+        </div>
+    </div>
+</section>
+
+@section scripts{
+    <script>
+            CKEDITOR.replace('blogEdit');
+    </script>
+}

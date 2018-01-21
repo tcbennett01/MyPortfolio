@@ -1,0 +1,318 @@
+﻿
+    <!-- ==============================================
+    JAVASCRIPT EXERCISES
+    =============================================== -->
+
+<section id="jsExercises" class="dark-bg padding-top-bottom">
+    <div class="container">
+        <br />
+        <h2 class="text-center heading pageTitle  ">JAVASCRIPT EXERCISES</h2><br />
+
+        <!-- JS Exercise - Button Group -->
+        <div class="row text-center">
+            <div class="col-md-12">
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary jsBtnSelect" id="displayStatsBtn">Number Stats</button>
+                <button type="button" class="btn btn-primary jsBtnSelect" id="displayFactorialBtn">Factorial</button>
+                <button type="button" class="btn btn-primary jsBtnSelect" id="displayFizzBtn">Fizz Buzz</button>
+                <button type="button" class="btn btn-primary jsBtnSelect" id="displayPalindromeBtn">Palindrome</button>
+            </div>
+                </div>
+        </div>
+        <br>
+
+        <!-- BEGIN - NUMBER STATS -->
+        <div class="row js-row" id="numStatsRow">
+            <h3 class="heading text-center">NUMBER STATISTICS</h3><br>
+
+            <!-- Description -->
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <p>Enter 5 numbers below and click 'Submit'. The program will print the least, greatest, mean, sum, and
+                        product of all numbers entered by the user.
+                    </p><br>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <div class="col-md-2"></div> <!-- Spacer - future use -->
+            <div class="col-md-4">
+                <form id="formInput">
+                    <label>Number 1: </label> <input class="numberInput text-center" type="number" id="numInput1" /><br />
+                    <label>Number 2: </label> <input class="numberInput text-center" type="number" id="numInput2" /><br />
+                    <label>Number 3: </label> <input class="numberInput text-center" type="number" id="numInput3" /><br />
+                    <label>Number 4: </label> <input class="numberInput text-center" type="number" id="numInput4" /><br / >
+                    <label>Number 5: </label> <input class="numberInput text-center" type="number" id="numInput5" /><br /><br />
+                </form>
+                <div>
+                    <button class="btn btn-primary myBtnWidth" id="numGameSubmit">Submit</button>
+                    <button class="btn btn-primary myBtnWidth" id="numGameReset">Reset</button>
+                    <a href="" class="btn btn-primary myBtnWidth" data-toggle="modal" data-target="#numStat">Code</a>
+                    <br /><br />
+                </div>
+            </div>
+            <div class="col-md-1"></div> <!-- Spacer - future use -->
+            <div class="col-md-3">
+                <div id="numsOutput"></div> <!-- Blank div for output -->
+            </div>
+
+            <!-- Modal:  Number Stats Code -->
+            <div class="modal fade" id="numStat" tabindex="-1" role="dialog" ">
+                <div class="modal-dialog modal-md modalOverride">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close modalClose" data-dismiss="modal">X</button>
+                            <h3 class="modal-title text-center">CODE: NUMBER STATISTICS</h3>
+                        </div>
+                        <div class="modal-body col-md-12">
+                            <pre class="prettyprint linenums">
+$("#numGameSubmit").click(function(){
+    var num1 = parseFloat($("#numInput1").val());
+    var num2 = parseFloat($("#numInput2").val());
+    var num3 = parseFloat($("#numInput3").val());
+    var num4 = parseFloat($("#numInput4").val());
+    var num5 = parseFloat($("#numInput5").val());
+    var minNum = Number(Math.min(num1,num2, num3, num4, num5));
+    var maxNum = Number(Math.max(num1,num2, num3, num4, num5));
+    var sumNum = Number(num1 + num2 + num3 + num4 + num5);
+    var meanNum = Number(sumNum / 5);
+    var prodNum = Number(num1 * num2 * num3 * num4 * num5);
+    // Statistics Output
+    $("#numsOutput").append("&lt;p&gt;Lowest: " + minNum + "&lt;/p&gt;");
+    $("#numsOutput").append("&lt;p&gt;Greatest: " + maxNum + "&lt;/p&gt;");
+    $("#numsOutput").append("&lt;p&gt;Mean: " + meanNum + "&lt;/p&gt;");
+    $("#numsOutput").append("&lt;p&gt;Sum: " + sumNum+ "&lt;/p&gt;");
+    $("#numsOutput").append("&lt;p&gt;Product: " + prodNum + "&lt;/p&gt;");
+});
+              </pre>
+                        </div>
+                        <div class="modal-footer no-margin">
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End Modal -->
+        </div>
+        <!-- END - NUMBER STATS -->
+
+        <!-- BEGIN - FACTORIAL -->
+        <div class="row js-row" id="factorialRow">
+            <h3 class="heading text-center">FACTORIAL</h3><br>
+
+            <!-- Description -->
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <p>Enter a non-negative integer below. The program will calculate and print the factorial of the number entered by the user.  The factorial of a non-negative integer <em>n</em> is the product of all positive integers less than or equal to <em>n</em> (i.e. 5! = 5 x 4 x 3 x 2 x 1 = 120). </p><br>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="col-md-2"></div> <!-- Spacer - future use -->
+            <div class="col-md-4">
+                <form id="formFactorial">
+                    <label>Number: </label> <input class="numberInput text-center" type="number" id="factorialInput" />
+                    <br><br>
+                </form>
+                <div>
+                    <button class="btn btn-primary myBtnWidth" id="factorialSubmit">Submit</button>
+                    <button class="btn btn-primary myBtnWidth" id="factorialReset">Reset</button>
+                    <a href="" class="btn btn-primary myBtnWidth" data-toggle="modal" data-target="#factModal">Code</a>
+                    <br><br>
+                </div>
+            </div>
+            <div class="col-md-1"></div> <!-- Spacer - future use -->
+            <div class="col-md-3">
+                <div id="factorialOutput"></div>  <!-- Blank div for output -->
+            </div>
+
+            <!-- Modal:  Factorial code-->
+            <div class="modal fade" id="factModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-md modalOverride">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close modalClose" data-dismiss="modal">X</button>
+                            <h3 class="modal-title text-center">CODE: FACTORIAL</h3>
+                        </div>
+                        <div class="modal-body col-md-12">
+                            <pre class="prettyprint linenums">
+$("#factorialSubmit").click(function() {
+    var factInput = parseFloat($("#factorialInput").val());
+    var answer = factInput;
+    if (isNaN(factInput) || factInput % 1 !==0 || factInput <=0) {
+        alert("Please enter a valid number!");
+        return;
+    } else {
+        for (i = factInput - 1; i > 1; i--){
+            answer *= i;
+        }
+    }
+    // Output
+    $("#factorialOutput").append("&lt;p&gt;The factorial of " + factInput + " is: " + answer + "&lt;/p&gt;");
+});
+// Factorial Reset
+$("#factorialReset").click(function(){
+    $("#factorialInput").val("");
+    $("#factorialOutput").html("");
+});
+              </pre>
+                        </div>
+                        <div class="modal-footer no-margin">
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End Modal -->
+        </div>
+        <!-- END - FACTORIAL -->
+        <!-- BEGIN - FIZZ BUZZ -->
+        <div class="row js-row" id="fizzRow">
+            <h3 class="heading text-center">FIZZ BUZZ</h3><br>
+
+            <!-- Description -->
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <p>Please enter two numbers between 1 and 100. The program will iterate through all numbers from 1 to 100 printing each number in ascending order. For each number that is a multiple of the first number input by the user, the program will print "Fizz" in place of the number entered.  For each number that is a multiple of the second number input by the user, the program will print "Buzz" in place of the number entered. For numbers that are multiples of both numbers entered, the program will print "FizzBuzz" instead of the number.  </p><br>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="col-md-2"></div> <!-- Spacer - future use -->
+            <div class="col-md-4">
+                <form id="formFizzBuzz">
+                    <label>Number 1: </label> <input class="numberInput text-center" type="number" id="fizzInput" /><br>
+                    <label>Number 2: </label> <input class="numberInput text-center" type="number" id="buzzInput" /><br>
+                    <br>
+                </form>
+                <div>
+                    <button class="btn btn-primary myBtnWidth" id="fizzBuzzSubmit">Submit</button>
+                    <button class="btn btn-primary myBtnWidth" id="fizzBuzzReset">Reset</button>
+                    <a href="" class="btn btn-primary myBtnWidth" data-toggle="modal" data-target="#fizzBuzzModal">Code</a>
+                    <br><br>
+                </div>
+            </div>
+            <div class="col-md-1"></div> <!-- Spacer - future use -->
+            <div class="col-md-3">
+                <!--       <h4 class="heading">Output</h4> -->
+                <div id="fizzBuzzOutput"></div>  <!-- Blank div for output -->
+            </div>
+
+            <!-- Modal:  Fizz Buzz Code -->
+            <div class="modal fade" id="fizzBuzzModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-md modalOverride">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close modalClose" data-dismiss="modal">X</button>
+                            <h3 class="modal-title text-center" id="myModalLabel">CODE: FIZZ BUZZ</h3>
+                        </div>
+                        <div class="modal-body col-md-12">
+                            <pre class="prettyprint linenums">
+$('#fizzBuzzSubmit').click(function(){
+    var fizzNum = parseInt($('#fizzInput').val());
+    var buzzNum = parseInt($('#buzzInput').val());
+    if (isNaN(fizzNum) || fizzNum < 1
+                       || fizzNum > 100
+                       || isNaN(buzzNum)
+                       || buzzNum < 1
+                       || buzzNum > 100){
+        alert("Please enter valid numbers between 1 and 100");
+        return;
+    } else {
+        for (var i = 1; i <= 100; i++){
+            if (i % fizzNum === 0 && i % buzzNum === 0 ){
+                printNum="FizzBuzz";
+            } else if (i % fizzNum === 0){
+                printNum="Fizz";
+            } else if (i % buzzNum === 0){
+                printNum="Buzz";
+            } else {
+                printNum=i;
+            }
+            $('#fizzBuzzOutput').append(printNum + ", ");
+        }
+    }
+});
+$('#fizzBuzzReset').click(function(){
+    $('#fizzInput').val("");
+    $('#buzzInput').val("");
+    $('#fizzBuzzOutput').html("");;
+});
+              </pre>
+                        </div>
+                        <div class="modal-footer no-margin">
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End Modal -->
+        </div>
+
+        <!-- END - FIZZ BUZZ -->
+        <!-- BEGIN - PALINDROME -->
+        <div class="row js-row" id="palindromeRow">
+            <h3 class="heading text-center">PALINDROME</h3><br>
+
+            <!-- Description -->
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <p>Enter a word below and click 'Submit'. The program will determine if the word is a palindrome - the same backward as it is forward (i.e. "radar").</p><br>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="col-md-2"></div> <!-- Spacer - future use -->
+            <div class="col-md-3">
+                <form id="formPalindrome">
+                    <label>Word: </label><br>
+                    <input class="phraseInput" type="text" id="palindromeInput" /><br>
+                    <br>
+                </form>
+                <div>
+                    <button class="btn btn-primary myBtnWidth" id="palindromeSubmit">Submit</button>
+                    <button class="btn btn-primary myBtnWidth" id="palindromeReset">Reset</button>
+                    <a href="" class="btn btn-primary myBtnWidth" data-toggle="modal" data-target="#palindromeModal">Code</a>
+                    <br><br>
+                </div>
+            </div>
+            <div class="col-md-2"></div> <!-- Spacer - future use -->
+            <div class="col-md-4">
+                <div id="palindromeOutput"></div>  <!-- Blank div for output -->
+            </div>
+
+            <!-- Modal:  Palindrome code -->
+            <div class="modal fade" id="palindromeModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-md modalOverride">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close modalClose" data-dismiss="modal">X</button>
+                            <h3 class="modal-title text-center" id="myModalLabel">CODE: PALINDROME</h3>
+                        </div>
+                        <div class="modal-body col-md-12">
+                            <pre class="prettyprint linenums">
+$('#palindromeSubmit').click(function(){
+    var palindromePhrase = $('#palindromeInput').val();
+    var reversePhrase = "";
+    // Validate submission != empty string
+    if (palindromePhrase.length < 1) {
+        alert("Please enter a valid phrase!");
+        return;
+    }
+    reversePhrase = palindromePhrase.split("").reverse().join("");
+    if (palindromePhrase.length == 1 || reversePhrase == palindromePhrase){
+        $('#palindromeOutput').append("<p> The word '" + palindromePhrase + "'' is a palindrome.</p>");
+    } else {
+        $('#palindromeOutput').append("<p> The word '" + palindromePhrase + "'' is not a palindrome.</p>");
+    }
+});
+$('#palindromeReset').click(function(){
+    $('#palindromeInput').val("");
+    $('#palindromeOutput').html("");
+});
+              </pre>
+                        </div>
+                        <div class="modal-footer no-margin">
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End Modal -->
+        </div>
+        <!-- END - PALINDROME -->
+    </div>
+</section>

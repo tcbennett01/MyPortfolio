@@ -1,0 +1,37 @@
+﻿
+/*---------------------------------
+-- Override:  Account Views     ---
+---------------------------------*/
+
+body{
+        margin-top: 150px;
+        background-color: #3A3c4a;
+        color: #fff;
+}
+
+#main-nav.scrolled .nav a {
+    color: #3A3C4a;
+
+}
+
+.nav #logo a:hover {
+    color: #36D9C3;
+}
+
+/* Navigation Hover*/
+#main-nav .nav #logo a:hover {
+    color:#36D9C3;
+}
+
+.accountWrapStyle{
+    border: 5px solid #36D9C3;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    color: black;
+}
+.accountWrapStyle h2{
+    color: #36D9C3;
+}
+footer{
+    visibility: hidden;
+}

@@ -1,0 +1,88 @@
+﻿@model tbPortfolio.Models.Comment
+
+@{
+    Layout = "~/Views/Shared/_LayoutBlog.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/myBlogCommentAdmin.css">
+
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+
+<section id="deleteHome">
+    <div class="container">
+        <div class="row contentArea">
+            <h2 style="margin: 10px 0 0 10px">Delete Comments</h2><br />
+
+            <h3 style="margin-left: 10px">Are you sure you want to delete this comment?</h3>
+            <div>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Author.FirstName)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Author.FirstName)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Post.Title)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Post.Title)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Body)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Body)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Created)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Created)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Updated)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Updated)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.UpdateReason)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.UpdateReason)
+                    </dd>
+
+                </dl>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-actions no-color col-md-offset-1">
+                        <input type="submit" value="Delete" class="btn btn-default" />
+                    </div>
+                }
+            </div><br />
+            <div style="margin-left: 10px">
+                <a href="@Url.Action("Details", "BlogPosts", new { slug = Model.Post.Slug})">Back To Post</a>
+            </div>
+        </div>
+    </div>
+</section>

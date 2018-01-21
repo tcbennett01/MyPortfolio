@@ -1,0 +1,127 @@
+﻿/*--------------------------------
+---Header Navigation Override  ---
+---------------------------------*/
+.navbar-nav {
+    float:none;
+    text-align:left;
+}
+
+#main-nav li {
+    background: transparent;
+    margin: 0 20px;
+    opacity: 1;
+}
+.nav #logo a:hover {
+    color:#36D9C3;
+}
+.nav #logo{
+    padding-left: 100px;
+}
+
+body {
+
+    background-image: url("../assets/photo-bridge-details.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    text-align: center;
+    margin-top: 100px;
+}
+
+
+#blogDetails{
+    border: 10px solid #36D9ce;
+    border-radius: 50px;
+    margin: 100px;
+    background-color: #fff;
+
+}
+
+#blogDetails hr{
+    border: 1px solid #eeeeee;
+}
+
+.heading {
+    color: #36D9CE;
+    font-size: 2.5em;
+}
+#blogDetails .btn-primary{
+    background-color: #36D9ce;
+    border: 1px solid #36D9C3;
+    border-radius: 15px;
+    font-size: 16px
+    
+}
+#blogDetails .btn-primary a{
+    color: #fff;
+}
+
+footer{
+    visibility: hidden;
+}
+@media (max-width: 991px) {
+
+    #blogDetails {
+        margin: 50px;
+    }
+
+    #detailsPost{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .heading {
+        font-size: 2em;
+    }
+    h3{
+        font-size: 1.15em;
+    }
+    #dateTime{
+        font-size: .9em;
+    }
+}
+
+@media (max-width: 767px) {
+
+    #blogDetails{
+        margin: 10px;
+    }
+        #detailsPost {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .heading {
+        font-size: 2em;
+    }
+
+    h3{
+        font-size: 1em;
+    }
+    #dateTime{
+        font-size: .85em;
+    }
+}
+
+@media (max-width: 479px) {
+
+    #blogDetails{
+        margin: 0px;
+    }
+        #detailsPost {
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+    .heading {
+        font-size: 1.5em;
+    }
+
+    h3{
+        font-size: .95em;
+    }
+    #dateTime{
+        font-size: .80em;
+    }
+}

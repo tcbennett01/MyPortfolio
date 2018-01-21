@@ -1,0 +1,42 @@
+﻿.navbar-nav {
+    float:none;
+    text-align:left;
+}
+
+#main-nav{
+    background-color: #1D2026;
+}
+#main-nav li {
+    background: transparent;
+    margin: 0 20px;
+    opacity: 1;
+    
+}
+.nav #logo a:hover {
+    color:#36D9C3;
+}
+body{
+    margin-top: 135px;
+    background-color: #f2f2f2;
+}
+
+hr{
+    border: 1px solid #36D9C3;
+}
+
+.blogCreateArea{
+    border: 10px solid #36D9C3;
+    border-radius: 25px
+}
+
+#blogIndexLink span{
+    background-color: #36D9C3;
+    border: 1px solid #36D9C3;
+}
+
+#blogIndexLink span a{
+    color: white;
+}
+footer{
+    visibility: hidden;
+}

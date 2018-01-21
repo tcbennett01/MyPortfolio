@@ -1,0 +1,139 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+    <!-- ==============================================
+    Title and Meta Tags
+    =============================================== -->
+    <meta charset="utf-8">
+    <title>T Bennett Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- ==============================================
+    Favicons
+    =============================================== -->
+    <link rel="shortcut icon" href="~/assets/favicon.ico">
+    <link rel="apple-touch-icon" href="~/assets/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/assets/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/assets/apple-touch-icon-114x114.png">
+    <!-- ==============================================
+    CSS
+    =============================================== -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/font-awesome.css">
+    <link rel="stylesheet" href="~/css/flexslider.css">
+    <link rel="stylesheet" href="~/css/meflat-light-green.css">
+    <link rel="stylesheet" href="~/css/js_style.css">
+  
+
+    <!-- ==============================================
+    Fonts
+    =============================================== -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,300italic,200,400italic,600,600italic' rel='stylesheet' type='text/css'>
+    <!-- ==============================================
+    JS
+    =============================================== -->
+    <!--[if lt IE 9]>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="~/js/libs/modernizr.min.js"></script>
+
+</head>
+<body data-spy="scroll" data-target="#main-nav" data-offset="400">
+
+        <!-- ==============================================
+        MAIN NAV
+        =============================================== -->
+        <div id="main-nav" class="navbar navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#site-nav">
+                        <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                    </button>
+                    <!-- ======= LOGO (for small screens)========-->
+                    <a class="navbar-brand visible-xs scrollto" href="@Url.Action("Index","Home")">Tb</a>
+                </div>
+                <div id="site-nav" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="@Url.Action("About","Home")">About Me</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Services","Home")">My Skills</a>
+                        </li>
+                        <li>
+                            <a href="~/assets/Resume-TBennett-2018-Update.pdf" target="_blank" style="vertical-align: central">Resume</a>
+                        </li>
+                        <li id="logo">
+                            <a href="@Url.Action("Index","Home")">
+                                <h1>T<span>B</span></h1>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Portfolio","Home")">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Index","BlogPosts")">Blog</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Contact","Home")">Contact Me</a>
+                        </li>
+                    </ul>
+ 
+                    @*@Html.Partial("_LoginPartial")*@
+ 
+                 </div><!--End navbar-collapse -->
+            </div><!--End container -->
+        </div><!--End main-nav -->
+
+        
+    
+        @RenderBody()
+
+
+
+    <!-- ==============================================
+    FOOTER
+    =============================================== -->
+    <footer id="main-footer" class="bg-aqua" light-typo">
+        <div class="container">
+            <br />
+               <div class="row">
+                <div class="col-sm-6">
+                    <ul class="social-links">
+                        <li class="scrollimation fade-right d1"><a href="https://www.linkedin.com/in/timbennett01" target="_blank"><i class="fa fa-linkedin fa-fw"></i></a></li>
+                        <li class="scrollimation fade-right d2"><a href="https://github.com/tcbennett01" target="_blank"><i class="fa fa-github fa-fw"></i></a></li>
+                        @*<li class="scrollimation fade-right d3"><a href="https://plus.google.com/110245305080621608564/posts" target="_blank"><i class="fa fa-google-plus fa-fw"></i></a></li>*@
+                    </ul>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <p>&copy;2018 Tim Bennett </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==============================================
+    SCRIPTS
+    =============================================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;skin=desert"></script>
+    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.1.min.js">\x3C/script>')</script>
+    <script src="~/js/libs/bootstrap.min.js"></script>
+    <script src='~/js/jquery.easing.1.3.min.js'></script>
+    <script src='~/js/jquery.scrollto.js'></script>
+    <script src="~/js/jquery.fittext.js"></script>
+    <script src='~/js/jquery.flexslider.min.js'></script>
+    <script src='~/js/jquery.masonry.js'></script>
+    <script src="~/js/waypoints.min.js"></script>
+    <script src="~/js/jquery.label_better.min.js"></script>
+    <script src="~/js/jquery.easypiechart.js"></script>
+    <script src="~/js/contact.js"></script>
+    <script src="~/js/meflat.js"></script>
+    <script src="~/js/myJS.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+

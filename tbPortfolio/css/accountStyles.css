@@ -1,0 +1,42 @@
+﻿/*--------------------------------
+---Header Navigation Override  ---
+---------------------------------*/
+    .navbar-nav {
+        float:none;
+        text-align:left;
+    }
+
+#main-nav li {
+    background: transparent;
+    margin: 0 20px;
+    opacity: 1;
+}
+.nav #logo a:hover {
+    color:#36D9C3;
+}
+
+#blogArea{
+    margin: 10px;
+}
+
+#blogArea .btn-default{
+    background-color: #36D9C3;
+    color: #fff;
+    font-weight: 700;
+}
+footer{
+    visibility: hidden;
+}
+
+@media (max-width: 479px) {
+
+    #blogArea{
+        margin: 0px;
+    }
+
+    .blogHeaderTitle h1 {
+    font-size: 2em;
+    font-weight: 700;
+    font-family: 'Roboto Slab',serif;
+    }
+}

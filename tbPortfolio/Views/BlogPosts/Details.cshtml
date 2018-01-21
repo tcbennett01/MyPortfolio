@@ -1,0 +1,97 @@
+﻿@model tbPortfolio.Models.BlogPost
+
+@{
+    ViewBag.Title = "Details";
+}
+
+@{
+    Layout = "~/Views/Shared/_LayoutBlog.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/myBlogStylesDetail.css">
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row text-center" id="blogDetails">
+            <!-- Blog Post Content Column -->
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
+                <!-- Blog Post -->
+                <!-- Title -->
+                <br /><br />
+                <h1 class="text-uppercase heading">@Html.DisplayFor(model => model.Title)</h1>
+                <!-- Author -->
+                <h3 >
+                    <small>by</small> Tim Bennett
+                </h3>
+                <!-- Date/Time -->
+                <p id="dateTime"><span class="glyphicon glyphicon-time"></span> Posted on @Html.DisplayFor(model => model.Created)</p>
+                <hr>
+
+                <!-- Preview Image -->
+                @if (Model.MediaURL != null)
+                {
+                    <img class="img-responsive" src="@Model.MediaURL" alt="">
+                }
+           
+                <!-- Post Content -->
+                <div class="row text-justify" id="detailsPost">
+                    <p class="lead">@Html.Raw(Model.Body)</p><br />
+                </div>
+               
+                <!-- Leave Comments - Authenticated Only -->          
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <hr>
+                    <div class="well">
+                        <h4>Leave a Comment:</h4>
+                   
+                         @using (Html.BeginForm("Create", "Comments", FormMethod.Post, new { id = Model.Id })) 
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="form-group">
+                                <input type="hidden" name="PostId"  value="@Model.Id"/>
+                                <textarea class="form-control" id="blogComment" name="Body" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        }
+                    </div>              
+                }
+                <hr>
+                <!-- Posted Comments -->
+                <h5 class="text-left">Previous Comments (<span>@Model.Comments.Count</span>)<span style="font-size: smaller"> -Log in to comment</span></h5>
+                @foreach (var item in Model.Comments)
+                {
+                    <div class="media text-left">
+                        <a class="pull-left" href="#">
+                         <img class="media-object" src="~/assets/genericAvatar.jpg" alt="" style="height: 50px; width: 50px">
+                        </a>
+                        <div class="media-body">
+                            <h5 class="media-heading">
+                                <strong>@Html.DisplayFor(modelItem => item.Author.DisplayName) </strong>
+                            @Html.DisplayFor(modelItem => item.Created)   
+                             </h5>
+                            @Html.DisplayFor(modelItem => item.Body)
+                        </div>  
+
+                        @* Validate roles to edit or delete*@
+                        @if (User.IsInRole("Admin") || User.IsInRole("Moderator"))
+                        {
+                            <div class="text-left">
+                             <a href="@Url.Action("Edit", "Comments", new { id = item.Id})">Edit | </a>
+                            <a href="@Url.Action("Delete", "Comments", new { id = item.Id})">Delete</a>
+                            </div>
+                        }
+
+                    </div>
+                }
+                <br />
+                <p>
+                    <a class="btn btn-primary" href="@Url.Action("Index","BlogPosts")"><span class="glyphicon glyphicon-chevron-left"></span>Blog Home</a> 
+                </p>   
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->

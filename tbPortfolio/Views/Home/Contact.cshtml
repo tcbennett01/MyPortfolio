@@ -1,0 +1,42 @@
+﻿
+<link rel="stylesheet" href="~/css/override-about-contact.css">
+<!-- ==============================================
+CONTACT
+=============================================== -->
+<section id="contact" class="dark-bg light-typo padding-top">
+    <div class="container">
+        <br />
+        <header class="section-header text-center">
+            <h1 class="scrollimation scale-in">Drop Me a Line</h1><br />
+            <p>Thank you for stopping by!<br /> Please feel free to send me a brief message below.</p>
+        </header>
+        <div class="contact-form">
+            <form id="contact-form" class="bl_form text-center" method="post" role="form" novalidate>
+
+                @using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+            {
+                    @Html.AntiForgeryToken()
+
+                    <span class="field-wrap scrollimation fade-right">
+                        <label class="sr-only" for="name">Name:</label>
+                        <input type="text" id="name" class="label-better form-control" name="name" placeholder="Name*" required>
+                    </span>
+                     <span class="field-wrap scrollimation fade-in">
+                        <label class="sr-only" for="email">Email:</label>
+                        <input type="email" id="email" class="form-control" name="email" placeholder="Email*" required>
+                    </span>
+                    <span class="field-wrap scrollimation fade-left">
+                        <label class="sr-only" for="message">Message:</label>
+                        <textarea id="message" name="message" class="form-control" placeholder="Message*" required></textarea>
+                    </span>                
+                    <p class="text-center">
+                        <button type="submit" class="btn btn-meflat icon-left" id="submit-button" data-error-message="Error!" data-sending-message="Sending..." data-ok-message="Message Sent">
+                            <i class="fa fa-paper-plane"></i><span>Send Message</span>
+                        </button>
+                    </p>
+                    <input type="hidden" name="msg-submitted" id="msg-submitted" value="true">
+                }
+        </div>
+    </div>
+</section>
+

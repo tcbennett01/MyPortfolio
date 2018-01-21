@@ -1,0 +1,95 @@
+body {
+    background-color:  #1D2026 ;
+}
+
+.numberInput{
+    border: 1px solid black;
+    width: 75px;
+}
+
+.phraseInput{
+    border: 1px solid black;
+    width: 200px;
+}
+
+.heading{
+    font-weight: bold;
+}
+
+.prettyprint ol.linenums > li {
+
+    list-style-type: decimal;
+}
+
+.jsBtnSelect {
+    width: 150px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #36D9C3;
+    color: #fff;
+    border-color: #188173;
+}
+
+.jsBtnSelect:hover {
+    background-color: #fff;
+    color: #36D9C3;
+}
+
+.jsBtnSelect:focus{
+    background-color: #36D9C3;
+    color: #fff;
+}
+
+.pageTitle, hr {
+    color: #fff;
+}
+
+
+.js-row {
+    background-color: #f2f2f2;
+    border: 7px solid #36D9C3;
+    border-radius: 15px;
+    margin: 0 20px 0 20px;
+}
+
+.modal-header {
+    background-color: #36D9C3;
+    color: #fff;
+}
+
+.modalClose {
+    color: #fff;
+    opacity: .5;
+}
+
+.modal-content  {
+    border-radius: 25px;
+
+}
+
+pre  {
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+.modalOverride{
+    width: 50%;
+    margin: auto;
+}
+
+#factorialRow,
+#fizzRow,
+#palindromeRow {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .js-row {
+        margin: 0;
+    }
+    
+    .modalOverride{
+    width: 90%;
+    margin: auto;
+    }
+}

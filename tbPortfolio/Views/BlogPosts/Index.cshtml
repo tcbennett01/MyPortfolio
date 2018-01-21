@@ -1,0 +1,95 @@
+﻿@*@model IEnumerable<tbPortfolio.Models.BlogPost>*@
+@model IPagedList<tbPortfolio.Models.BlogPost>
+@using PagedList;
+@using PagedList.Mvc
+@using tbPortfolio.Models;
+
+@{
+    Layout = "~/Views/Shared/_LayoutBlog.cshtml";
+}
+
+<link rel="stylesheet" type="text/css" href="~/Content/PagedList.css" />
+<link rel="stylesheet" type="text/css" href="~/css/myBlogStyles.css">
+
+@*@{
+    ViewBag.Title = "Index";
+}*@
+
+    <!-- Header Title -->
+    <div id="blogTopImage" class="blogTopImage blogHeader">
+        <div class="blogHeaderTitle">
+            <h1>Coding</h1>
+            <h1>Quest</h1>
+        </div>  
+    </div> 
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row" id="blogArea">
+            <!-- Blog Entries Column -->
+            <div class="col-md-8">
+                <h1 class="page-header" id="postHeader">
+                    BLOG POSTS
+                </h1><br />
+                <hr />       
+                           
+                @foreach (var item in Model.OrderByDescending(m => m.Created))
+                {
+                     <h2 id="blogTitle">
+                        <a href="@Url.Action("Details", "BlogPosts", new { slug = item.Slug })">@item.Title</a>
+                    </h2>
+                    <p >
+                        by Tim Bennett
+                    </p>
+                    <p><span class="glyphicon glyphicon-time"></span> Posted on @Html.DisplayFor(modelItem => item.Created)</p>
+
+                    <div id="wrapper" class="dot-ellipsis">
+                        <p>@Html.Raw(item.Body)</p>
+                    </div><br />
+                    <a class="btn btn-primary" href="@Url.Action("Details", "BlogPosts", new { slug = item.Slug })">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+
+                        // Authenticate role to displayedit options
+                        if (User.IsInRole("Admin"))
+                        {
+                        <span class="adminEdit">
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                        </span>
+                        }
+                    <hr>
+                }
+
+                <!-- Pager -->
+                Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))           
+            </div>
+
+            <!-- Blog Sidebar Widgets Column -->
+            <div class="col-md-4">
+                <div style="margin-top: 10px">
+                    @if (User.IsInRole("Admin"))
+                    {
+                    <a href="@Url.Action("Create", "BlogPosts")" style="font-weight: bold">Admin: Create New Post</a>                    
+                    }
+                </div>
+                <!-- Blog Search Well -->         
+                <div class="well" style="margin-top: 25px">
+                    <h4>Blog Search</h4>
+                    @using (Html.BeginForm("Index", "BlogPosts", FormMethod.Post))
+                    {
+                        @Html.TextBox("searchStr")
+                        <input type="submit" value="Search" name="searchStr" />
+                    }
+                    <!-- /.input-group -->
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+
+@section scripts{
+    <script src="~/js/jquery.dotdotdot.min.js"></script>
+}
+
+
+
+

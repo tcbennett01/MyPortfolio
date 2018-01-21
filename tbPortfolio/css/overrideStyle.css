@@ -1,0 +1,68 @@
+﻿
+/*--------------------------------
+---Header Navigation Override  ---
+---------------------------------*/
+#main-nav {
+    background-color: #fff;
+}
+
+#main-nav.scrolled .nav a {
+    color: #3A3C4a;
+
+}
+
+.nav #logo a:hover {
+    color: #36D9C3;
+}
+
+/*Navigation Links*/
+#main-nav .nav a,
+#main-nav .nav a:active,
+#main-nav .nav a:hover{
+    color:#3A3c4a; 
+}
+
+/* Navigation Hover*/
+#main-nav .nav #logo a:hover {
+    color:#36D9C3;
+}
+
+#main-nav .nav a:hover:before,
+#main-nav .nav .active a:before {
+    background-color: #3A3C4A;
+}
+
+/*--------------------
+--- Body Override  ---
+--------------------*/
+body {
+    background-color: #f2f2f2;
+}
+
+#services h1, #services h2, #portfolio h1{
+    color: #3A3C4A;
+}
+
+#services .btn:hover{
+    background-color: #36D9C3;
+}
+
+#services .btn{
+    background-color: #1D2026;
+}
+
+/*---------------------
+--- Footer Override ---
+----------------------*/
+
+#main-footer{
+    background-color:#1d2026; 
+    color: #fff;   
+}
+
+.social-links li a{
+    color: #fff;
+    background-color: #4f5a64;
+}
+
+

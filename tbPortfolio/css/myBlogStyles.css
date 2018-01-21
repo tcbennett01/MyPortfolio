@@ -1,0 +1,143 @@
+﻿/*--------------------------------
+---Header Navigation Override  ---
+---------------------------------*/
+.navbar-nav {
+    float:none;
+    text-align:left;
+}
+
+#main-nav li {
+    background: transparent;
+    margin: 0 20px;
+    opacity: 1;
+}
+.nav #logo a:hover {
+    color:#36D9C3;
+}
+
+
+/*--------------------
+--- Body Override  ---
+--------------------*/
+body {
+    background-color: #1D2026;
+ }
+
+#blogTopImage{
+    background-image: url("../assets/photo-bridge-index.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 316px;
+    width: 100%;
+    overflow: auto;
+    text-align: center;
+}
+
+.blogHeader{
+    color: white;
+    text-align: center;
+    
+}
+
+.blogHeaderTitle{
+    margin-top: 125px;
+
+}
+
+.blogHeaderTitle h1{
+    font-size: 3.5em;
+    font-weight:700;
+    font-family: 'Roboto Slab',serif;
+}
+
+#postHeader{
+    font-weight: 700;
+    font-size: 2.25em;
+    color: #36D9CE;
+}
+#blogArea{
+    border: 10px solid #36D9ce;
+    border-radius: 25px;
+    background-color: #f2f2f2;
+    color: #1D2026;
+    margin-top: 15px
+    
+}
+
+/*#blogIndexPreview*/
+#wrapper{
+    /*height: 72px;*/
+    max-height: 58px;
+    max-width: 700px;
+    overflow: hidden;
+   text-overflow: ellipsis;
+
+  }
+p {
+    margin-bottom: 10px;
+}
+
+#blogArea hr{
+    border: 1px solid #36D9ce;
+   
+}
+
+#blogTitle a{
+    color: #1D2026;
+}
+
+.pager li>a{
+    color: black;
+}
+
+#blogArea .well{
+    border: 1px solid #bfbfbf;
+}
+
+#services h1, #services h2, #portfolio h1{
+    color: #3A3C4A;
+}
+
+#services .btn:hover{
+    background-color: #36D9C3;
+}
+
+#services .btn{
+    background-color: #1D2026;
+}
+
+#blogArea .btn-primary{
+    background-color: #36D9ce;
+    border: 1px solid #36D9Ce;
+    border-radius: 15px;
+    font-size: 16px;
+}
+a#register{
+    color: #1D2026;
+  
+}
+
+.adminEdit{
+    color: #36D9ce;
+    float: right;
+}
+
+/*---------------------
+--- Footer Override ---
+----------------------*/
+
+footer{
+    visibility: hidden;
+}
+
+/*#main-footer{
+    background-color:#1d2026; 
+    color: #fff;   
+}
+
+.social-links li a{
+    color: #fff;
+    background-color: #4f5a64;
+}*/
+
