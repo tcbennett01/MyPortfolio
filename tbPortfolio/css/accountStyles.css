@@ -15,8 +15,12 @@
     color:#36D9C3;
 }
 
-#blogArea{
+/*#blogArea{
     margin: 10px;
+}*/
+
+#registrationHeader {
+    margin-top: 10px;
 }
 
 #blogArea .btn-default{

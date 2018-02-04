@@ -15,7 +15,9 @@
     color:#36D9C3;
 }
 .nav #logo{
-    padding-left: 100px;
+    padding-left: 75px;
+    padding-right: 25px;
+
 }
 
 body {
@@ -33,7 +35,7 @@ body {
 
 
 #blogDetails{
-    border: 10px solid #36D9ce;
+    border: 5px solid #36D9ce;
     border-radius: 50px;
     margin: 100px;
     background-color: #fff;

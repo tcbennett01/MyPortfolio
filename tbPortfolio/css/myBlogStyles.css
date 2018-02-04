@@ -15,24 +15,26 @@
     color:#36D9C3;
 }
 
+.nav #logo{
+    padding-left: 75px;
+    padding-right: 25px;
 
+}
 /*--------------------
 --- Body Override  ---
 --------------------*/
 body {
-    background-color: #1D2026;
- }
-
-#blogTopImage{
-    background-image: url("../assets/photo-bridge-index.jpg");
+    /*background-color: #1D2026;*/
+        background-image: url("../assets/photo-bridge-details.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 316px;
     width: 100%;
+    height: 100%;
     overflow: auto;
     text-align: center;
-}
+    margin-top: 100px;
+ }
 
 .blogHeader{
     color: white;
@@ -57,11 +59,12 @@ body {
     color: #36D9CE;
 }
 #blogArea{
-    border: 10px solid #36D9ce;
+    border: 5px solid #36D9ce;
     border-radius: 25px;
     background-color: #f2f2f2;
     color: #1D2026;
-    margin-top: 15px
+    /*margin-top: 15px*/
+    margin: 0 100px;
     
 }
 
@@ -123,21 +126,71 @@ a#register{
     float: right;
 }
 
-/*---------------------
---- Footer Override ---
-----------------------*/
-
 footer{
     visibility: hidden;
 }
 
-/*#main-footer{
-    background-color:#1d2026; 
-    color: #fff;   
+@media (max-width: 991px) {
+
+    #blogArea {
+        margin: 50px;
+    }
+
+    #blogArea{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .heading {
+        font-size: 2em;
+    }
+    h3{
+        font-size: 1.15em;
+    }
+    #dateTime{
+        font-size: .9em;
+    }
 }
 
-.social-links li a{
-    color: #fff;
-    background-color: #4f5a64;
-}*/
+@media (max-width: 767px) {
+
+    #blogArea{
+        margin: 10px;
+    }
+        #blogArea {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .heading {
+        font-size: 2em;
+    }
+
+    h3{
+        font-size: 1em;
+    }
+    #dateTime{
+        font-size: .85em;
+    }
+}
+
+@media (max-width: 479px) {
+
+    #blogArea{
+        margin: 0px;
+    }
+        #blogArea {
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+    .heading {
+        font-size: 1.5em;
+    }
+
+    h3{
+        font-size: .95em;
+    }
+    #dateTime{
+        font-size: .80em;
+    }
+}
 
