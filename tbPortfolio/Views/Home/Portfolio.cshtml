@@ -16,17 +16,15 @@ PORTFOLIO
                 <li class="active scrollimation fade-right d1">
                     <a href="#" data-filter="*">All</a>
                 </li>
-                <li class="scrollimation fade-right">
-                    <a href="#" data-filter=".javascript">JavaScript</a>
-                </li>
                 <li class="scrollimation fade-left">
                     <a href="#" data-filter=".mvc">MVC</a>
                 </li>
                 <li class="scrollimation fade-left d1">
-                    <a href="#" data-filter=".angular">Angular</a>
+                    <a href="#" data-filter=".angular">AngularJS</a>
                 </li>
-
-
+                <li class="scrollimation fade-right">
+                    <a href="#" data-filter=".javascript">JavaScript</a>
+                </li>
                 <li class="scrollimation fade-left d1">
                     <a href="#" data-filter=".earlyProjects">
                         First Projects
@@ -44,29 +42,14 @@ PORTFOLIO
             <!-- ==============================================
     END PROJECT ITEM
     =============================================== -->
-            <a href="@Url.Action("Index","BlogPosts")">
-                <article class="project-item mvc">
-                    <img class="img-responsive project-image" src="~/assets/blogResize.jpg" alt=""><!--Project thumb -->
+            <a href="https://tbennett-carfinder.azurewebsites.net/" target="_blank">
+                <article class="project-item angular javascript">
+                    <img class="img-responsive project-image" src="~/assets/carFinder.jpg" alt=""><!--Project thumb -->
                     <div class="hover-mask">
-                        <h2 class="project-title">Personal Blog</h2><!--Project Title -->
-                        <p>My Coding Quest - </p><!--Project Subtitle -->
-                        <p>Created using MVC &</p>
-                        <p>Entity Framework</p>
+                        <h2 class="project-title">Car Finder</h2><!--Project Title -->
+                        <p>Car recall app using AngularJS, ASP.Net Web API, Stored Procedures, NHTSA's Recall API, & Azure Image Search API. </p><!--Project Subtitle -->
                     </div>
-                    <!--==== Project Preview HTML ====-->
-                    @*<div class="sr-only project-description"
-                        data-category="Category"
-                        data-date="Date"
-                        data-client="Client"
-                        data-link="www.example.com,http://www.google.com"
-                        data-descr="A small description goes here."
-                        data-images="~/assets/placeholder-750x430.jpg,assets/placeholder-750x430.jpg">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
-                    <p>Nam eget urna pellentesque nisl ultrices dapibus. Mauris accumsan vehicula nisl, sed tempus mauris facilisis eu. Donec a iaculis nisi, quis malesuada justo. Pellentesque ut enim sit amet ipsum dignissim egestas. Morbi tincidunt rhoncus urna eget placerat.</p>
-                    <p class="text-right"><a class="btn btn-meflat icon-right" href="#external-link">Visit Website<i class="fa fa-arrow-right"></i></a></p>
-                </div>*@
-                </article><!--End Project Item -->
+                </article>
             </a>
             <a href="https://tbennett-bug-tracker.azurewebsites.net/" target="_blank">
                 <article class="project-item mvc">
@@ -95,61 +78,52 @@ PORTFOLIO
                         <h2 class="project-title">Household Budgeter</h2><!--Project Title -->
                         <p>Created using C#, MVC, Entity Framework, AJAX, & jQuery.</p><!--Project Subtitle -->
                     </div>
-                    <!--==== Project Preview HTML ====-->
-                    @*<div class="sr-only project-description"
-                     data-category="Category"
-                     data-date="Date"
-                     data-client="Client"
-                     data-link="www.example.com,http://www.google.com"
-                     data-descr="A small description goes here."
-                     data-images="~/assets/placeholder-750x430.jpg,assets/placeholder-750x430.jpg">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
-                    <p>Nam eget urna pellentesque nisl ultrices dapibus. Mauris accumsan vehicula nisl, sed tempus mauris facilisis eu. Donec a iaculis nisi, quis malesuada justo. Pellentesque ut enim sit amet ipsum dignissim egestas. Morbi tincidunt rhoncus urna eget placerat.</p>
-                    <p class="text-right"><a class="btn btn-meflat icon-right" href="#external-link">Visit Website<i class="fa fa-arrow-right"></i></a></p>
-                </div>*@
-                </article><!--End Project Item -->
+                </article>
             </a>
-            <article class="project-item angular">
-                <img class="img-responsive project-image" src="~/assets/carResize.png" alt=""><!--Project thumb -->
-                <div class="hover-mask">
-                    <h2 class="project-title">Car Finder</h2><!--Project Title -->
-                    <p>...in the shop for scheduled maintenance - back on the road soon!</p><!--Project Subtitle -->
-                </div>
-            </article><!--End Project Item -->
-            <a href="https://tcbennett01.github.io/First-Website/" target="_blank">
-                <article class="project-item earlyProjects javascript">
-                    <img class="img-responsive project-image" src="~/assets/firstSite.jpg" alt="" style="width: 320px; height: 210px"><!--Project thumb -->
+            <a href="@Url.Action("Index","BlogPosts")">
+                <article class="project-item mvc">
+                    <img class="img-responsive project-image" src="~/assets/blogResize.jpg" alt=""><!--Project thumb -->
                     <div class="hover-mask">
-                        <h2 class="project-title">First Website</h2><!--Project Title -->
-                        <p>Learning HTML, CSS, JavaScript & Bootstrap</p><!--Project Subtitle -->
+                        <h2 class="project-title">Personal Blog</h2><!--Project Title -->
+                        <p>My Coding Quest - </p><!--Project Subtitle -->
+                        <p>Created using MVC &</p>
+                        <p>Entity Framework</p>
                     </div>
-                    <!--==== Project Preview HTML ====-->
                 </article><!--End Project Item -->
             </a>
-            <a href="https://tcbennett01.github.io/hot-or-cold/" target="_blank">
-                <article class="project-item earlyProjects javascript">
-                    <img class="img-responsive project-image" src="~/assets/hotCold.jpg" alt="" style="width: 320px; height: 210px"><!--Project thumb -->
-                    <div class="hover-mask">
-                        <h2 class="project-title">Guess The Number Challenge</h2><!--Project Title -->
-                        <p>HTML, CSS, & JavaScript</p>
-                        <!--Project Subtitle -->
-                    </div>
-                    <!--==== Project Preview HTML ====-->
-                </article><!--End Project Item -->
-            </a>
-            <a href="https://tcbennett01.github.io/karma_landing_page_clone/" target="_blank">
-                <article class="project-item earlyProjects">
-                    <img class="img-responsive project-image" src="~/assets/karmaLandingPage.jpg" alt="" style="width: 320px; height: 210px"><!--Project thumb -->
-                    <div class="hover-mask">
-                        <h2 class="project-title">Karma Landing Page</h2><!--Project Title -->
-                        <p>First Project: recreate landing page using HTML & CSS</p>
-                        <!--Project Subtitle -->
-                    </div>
-                    <!--==== Project Preview HTML ====-->
-                </article><!--End Project Item -->
-            </a>
-        </div><!-- End projects -->
+                <a href="https://tcbennett01.github.io/First-Website/" target="_blank">
+                    <article class="project-item earlyProjects javascript">
+                        <img class="img-responsive project-image" src="~/assets/firstSite.jpg" alt="" style="width: 320px; height: 210px"><!--Project thumb -->
+                        <div class="hover-mask">
+                            <h2 class="project-title">First Website</h2><!--Project Title -->
+                            <p>Learning HTML, CSS, JavaScript & Bootstrap</p><!--Project Subtitle -->
+                        </div>
+                        <!--==== Project Preview HTML ====-->
+                    </article><!--End Project Item -->
+                </a>
+                <a href="https://tcbennett01.github.io/hot-or-cold/" target="_blank">
+                    <article class="project-item earlyProjects javascript">
+                        <img class="img-responsive project-image" src="~/assets/hotCold.jpg" alt="" style="width: 320px; height: 210px"><!--Project thumb -->
+                        <div class="hover-mask">
+                            <h2 class="project-title">Guess The Number Challenge</h2><!--Project Title -->
+                            <p>HTML, CSS, & JavaScript</p>
+                            <!--Project Subtitle -->
+                        </div>
+                        <!--==== Project Preview HTML ====-->
+                    </article><!--End Project Item -->
+                </a>
+                <a href="https://tcbennett01.github.io/karma_landing_page_clone/" target="_blank">
+                    <article class="project-item earlyProjects">
+                        <img class="img-responsive project-image" src="~/assets/karmaLandingPage.jpg" alt="" style="width: 320px; height: 210px"><!--Project thumb -->
+                        <div class="hover-mask">
+                            <h2 class="project-title">Karma Landing Page</h2><!--Project Title -->
+                            <p>First Project: recreate landing page using HTML & CSS</p>
+                            <!--Project Subtitle -->
+                        </div>
+                        <!--==== Project Preview HTML ====-->
+                    </article><!--End Project Item -->
+                </a>
+</div><!-- End projects -->
     </div><!-- End container -->
     <!-- ==============================================
     PROJECT PREVIEW MODAL (Do not alter this markup)

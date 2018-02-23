@@ -445,6 +445,7 @@
     <Content Include="assets\apple-touch-icon.png" />
     <Content Include="assets\blogResize.jpg" />
     <Content Include="assets\bugtrackerResize.jpg" />
+    <Content Include="assets\carFinder.jpg" />
     <Content Include="assets\carResize.png" />
     <Content Include="assets\chrome-top.png" />
     <Content Include="assets\chrome.png" />
@@ -932,11 +933,10 @@
     <Content Include="private.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="assets\Resume-T Bennett 2016-Web.pdf" />
-    <Content Include="assets\Resume-TBennett-2018-Update.pdf" />
     <Content Include="connectionStrings.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="assets\Resume-TBennett-2018-Update.pdf" />
     <None Include="Properties\PublishProfiles\Azure-CF-Portfolio.pubxml" />
     <None Include="Properties\PublishProfiles\cfPortfolio.pubxml" />
     <None Include="Properties\PublishProfiles\newAzurePortfolio-Deploy.pubxml" />
